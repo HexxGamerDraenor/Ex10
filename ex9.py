@@ -5,6 +5,8 @@ cost_of_house = 1000000
 epsilon = 100
 num_searches = 0
 
+months_to_save = 36
+
 low = 0
 high = cost_of_house
 
@@ -15,7 +17,7 @@ starting_salary = int(input("Enter starting salary: "))
 current_savings = starting_salary/12
 
 while abs(guess - cost_of_house) >= epsilon:
-    if guess < cost_of_house:
+    if guess*months_to_save > cost_of_house:
         low = guess
     else:
         high = guess
@@ -23,5 +25,3 @@ while abs(guess - cost_of_house) >= epsilon:
     num_searches += 1
 
 print("num_guesses = ", num_searches)
-
-
