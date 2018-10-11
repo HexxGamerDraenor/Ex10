@@ -10,6 +10,18 @@ high = cost_of_house
 
 guess = (high + low)/2.0
 
-starting_salary = int(Input("Enter starting salary: "))
+starting_salary = int(input("Enter starting salary: "))
 
-#current_savings = 
+current_savings = starting_salary/12
+
+while abs(guess - cost_of_house) >= epsilon:
+    if guess < cost_of_house:
+        low = guess
+    else:
+        high = guess
+    guess = (high + low)/2
+    num_searches += 1
+
+print("num_guesses = ", num_searches)
+
+
