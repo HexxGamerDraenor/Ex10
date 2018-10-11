@@ -17,7 +17,7 @@ starting_salary = int(input("Enter starting salary: "))
 current_savings = starting_salary/12
 
 while abs(guess - cost_of_house) >= epsilon:
-    if guess*months_to_save > cost_of_house:
+    if guess*months_to_save < cost_of_house:
         low = guess
     else:
         high = guess
